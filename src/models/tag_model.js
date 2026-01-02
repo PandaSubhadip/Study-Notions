@@ -1,4 +1,4 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 
 const tagSchema = new mongoose.Schema ({
     name:{
@@ -11,7 +11,7 @@ const tagSchema = new mongoose.Schema ({
     },
 
     course: {
-        type:mongoose.Schema.Typeses.objectId,
+        type:mongoose.Schema.Types.ObjectId,
         ref:'Course'
     }
 },{

@@ -1,4 +1,4 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 
 const sectionSchema = new mongoose.Schema (
     {
@@ -7,7 +7,7 @@ const sectionSchema = new mongoose.Schema (
             required:true
         },
         subsection:[{
-            type:mongoose.Schema.Typese.objectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref:'subSection'
         }]
     }

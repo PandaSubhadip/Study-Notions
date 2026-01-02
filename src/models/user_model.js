@@ -1,6 +1,6 @@
-const moongoose = required ('mongoose');
+const moongoose = require('mongoose');
 
-const userSchema = new moongoose.Sechema({
+const userSchema = new moongoose.Schema({
     firstName: {
         type: String,
         required:true
@@ -25,11 +25,11 @@ const userSchema = new moongoose.Sechema({
 
     },
     additionalDetails:{
-        type:moongoose.Sechema.Typese.objectId,
+        type:moongoose.Sechema.Types.objectId,
         ref:'Profile'
     },
     course:[{
-        type:moongoose.Sechema.Typese.objectId,
+        type:moongoose.Sechema.Types.objectId,
         ref:'Course'
     }],
     Image:{
@@ -37,7 +37,7 @@ const userSchema = new moongoose.Sechema({
         default:null
     },
     courseProgress:[{
-        type:moongoose.Sechema.Typese.objectId,
+        type:moongoose.Sechema.Types.objectId,
         ref:'coursePogress'
     }]
 

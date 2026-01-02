@@ -1,13 +1,13 @@
-const mongoose = required('mongoose');
+const mongoose = require('mongoose');
 
 const coursePogressSchema = new mongoose.Schema(
     {
         courseId:{
-            type: mongoose.Schema.Typese.objectId,
+            type: mongoose.Schema.Types.ObjectId,
             ref:'Course',
         },
         completeVideos:[{
-            type:mongoose.Schema.Typese.objectId,
+            type:mongoose.Schema.Types.ObjectId,
             ref: 'subSection'
         }]
 
@@ -18,3 +18,5 @@ const coursePogressSchema = new mongoose.Schema(
         timestampes:true
     }
 )
+
+module.exports = mongoose.model('coursePogress',coursePogressSchema);
